@@ -11,19 +11,18 @@ const onReady = function() {
 //  if (!newToDoText) { return }
 //
 //   this didn't work
-//   if (!newToDoText) {
-//     console.log("no input, aborting function");
-//     return
-//   }
+    console.log(newToDoText.value);
+    if (newToDoText.value.length == 0) {
+      console.log("no input, aborting function");
+      return
+    }
 //
-//   nor did this
-//   !newToDoText ? return;
 
     toDos.push({
       title: newToDoText.value,
       complete: false
     });
-    newToDoText.value = " ";
+    newToDoText.value = "";
 
     renderTheUI(toDos);
     }
